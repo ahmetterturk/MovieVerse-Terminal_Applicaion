@@ -1,4 +1,4 @@
-require_relative './Movie.rb'
+require_relative './models/Movie.rb'
 
 django = Movie.new('Dhango Unchained', '2015', 30)
 hobbit = Movie.new('The Hobbit', '2000', 20)
