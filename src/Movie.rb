@@ -4,6 +4,7 @@ class Movie
     MOVIES = []
 
     def initialize(title, year, price)
+        @id 
         @title = title
         @year = year 
         @price = price

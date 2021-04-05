@@ -1,6 +1,7 @@
-require_relative './models/Movie.rb'
+require_relative './Movie.rb'
+require_relative './MovieController'
 
-django = Movie.new('Dhango Unchained', '2015', 30)
+django = Movie.new('Django Unchained', '2015', 30)
 hobbit = Movie.new('The Hobbit', '2000', 20)
 harry_potter = Movie.new('harry Potter', '2001', 40)
 
@@ -23,4 +24,23 @@ banner = """
 """
 
 puts banner
-puts Movie.display_movies
+puts "Welcome to MovieVerse"
+
+begin
+   puts "What would you like to do?"
+   puts "Buy\nSell\nView Movies\nExit"
+   input, id = gets.chomp.downcase.split(' ')
+
+   if input == 'buy'
+      
+   end
+
+   if input == 'sell'
+      MovieController::sell
+   end
+
+   if input == 'view'
+      MovieController::list
+   end
+
+end until input == 'exit'
