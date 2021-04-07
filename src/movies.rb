@@ -43,4 +43,5 @@ begin
       MovieController::list
    end
 
+   puts
 end until input == 'exit'

@@ -7,7 +7,7 @@ module MovieController
         if movies.length == 0 
             puts "All movies are sold out"
         else 
-           puts Movie::display_movies 
+            puts Movie::display_movies 
         end
     end
 
