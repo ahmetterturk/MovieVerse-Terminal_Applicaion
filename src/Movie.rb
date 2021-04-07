@@ -15,13 +15,23 @@ class Movie
         MOVIES << self
     end
 
-
     def self.instances
        @instances 
     end
 
     def self.instances=(value)
         @instances = value
+    end
+
+    def self.find(id)
+        MOVIES.detect { |movie| movie.id == id }
+    end
+
+    def delete
+        return if @id.nil? 
+
+        idd = MOVIES.index { |movie| movie && movie.id == @id }
+        @id = MOVIES[idd] = nil 
     end
 
     def self.display_movies
