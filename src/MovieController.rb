@@ -29,8 +29,10 @@ module MovieController
         movie = Movie.new(title, date, offer)
     end
 
-    def self.buy 
-
+    def self.buy(id)
+        if movie = Movie.find(id)
+            movie.delete
+        end
     end
 
     def self.show

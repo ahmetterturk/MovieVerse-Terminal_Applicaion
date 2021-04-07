@@ -7,8 +7,8 @@ class Movie
     @instances = 0
 
     def initialize(title, year, price)
-        # @id = MOVIES.length + 1
-        @id = rand(500)
+        @id = MOVIES.length + 1
+        # @id = rand(500)
         @title = title
         @year = year 
         @price = price
@@ -24,12 +24,12 @@ class Movie
     end
 
     def self.find(id)
-        MOVIES.detect { |movie| movie.id == id }
+        return unless id 
+        MOVIES.detect { |movie| movie.id == id.to_i }
     end
 
     def delete
-        return if @id.nil? 
-
+        return if @id.nil?
         idd = MOVIES.index { |movie| movie && movie.id == @id }
         @id = MOVIES[idd] = nil 
     end
@@ -40,7 +40,7 @@ class Movie
 
 
     def to_s
-        "ID: #{@id} \nTitle: #{@title} \nYear: #{@year}  \nPrice: #{@price}"
+        "ID: #{id} \nTitle: #{@title} \nYear: #{@year}  \nPrice: #{@price}"
     end
 
     puts

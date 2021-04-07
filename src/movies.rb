@@ -32,7 +32,7 @@ begin
    input, id = gets.chomp.downcase.split(' ')
 
    if input == 'buy'
-      
+      MovieController::buy(id)
    end
 
    if input == 'sell'
