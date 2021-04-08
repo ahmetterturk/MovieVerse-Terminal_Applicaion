@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    artii (2.1.2)
     pastel (0.8.0)
       tty-color (~> 0.5)
     strings (0.2.1)
@@ -9,6 +10,7 @@ GEM
       unicode_utils (~> 1.4)
     strings-ansi (0.2.0)
     tty-color (0.6.0)
+    tty-font (0.5.0)
     tty-screen (0.8.1)
     tty-table (0.12.0)
       pastel (~> 0.8)
@@ -21,6 +23,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  artii (~> 2.1)
+  pastel (~> 0.8.0)
+  tty-font (~> 0.5.0)
   tty-table (~> 0.12.0)
 
 BUNDLED WITH
