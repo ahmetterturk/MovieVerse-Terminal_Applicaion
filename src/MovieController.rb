@@ -4,32 +4,27 @@ require 'tty-table'
 
 module MovieController
 
-
     def self.list
-        
         movies = Movie.display_movies
 
         def self.rows(movies) 
             ary = movies.map do |movie|
-                [ movie.id, movie.title, movie.year, movie.price ]
+                if not movie.nil?
+                    [ movie.id, movie.title, movie.year, movie.price ]
+                end
             end
             ary.compact
         end
 
-
         def self.index(movies)
             return puts("All movies are sold out") unless movies.length > 0 
-
-            table = TTY::Table.new(
-                ["ID","Title", "Year", "Price"], 
-                rows(movies)
-            )
+            table = TTY::Table.new(["ID","Title", "Year", "Price"], rows(movies))
             puts table.render(:unicode)
         end
 
         index(movies)
-
     end
+
 
     def self.sell 
         print "Movie Title: "
@@ -45,9 +40,9 @@ module MovieController
                 break
             end
         end
-        
         movie = Movie.new(title, date, offer)
     end
+
 
     def self.buy(id)
         if movie = Movie.find(id)
@@ -55,10 +50,25 @@ module MovieController
         end
     end
 
-    def self.show
-    end
 
-    def self.update
+    def self.show(id)
+        movie = Movie.find(id)
+
+        def self.rows(movie)
+            rows = []
+            rows.push(['Id', movie.id])
+            rows.push(['Title', movie.title])
+            rows.push(['Year', movie.year])
+            rows.push(['Price', movie.price])
+        end
+
+        def self.show_movie(movie)
+            table = TTY::Table.new(["Property", "Contents"], rows(movie))
+            puts table.render(:unicode)
+        end
+
+        show_movie(movie)
     end
+    
 
 end
