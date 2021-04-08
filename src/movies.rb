@@ -28,7 +28,7 @@ puts "Welcome to MovieVerse"
 
 begin
    puts "What would you like to do?"
-   puts "Buy\nSell\nView Movies\nExit"
+   puts "Buy\nSell\nView Movies\nShow Movie\nExit"
    input, id = gets.chomp.downcase.split(' ')
 
    if input == 'buy'
@@ -37,6 +37,10 @@ begin
 
    if input == 'sell'
       MovieController::sell
+   end
+
+   if input == 'show'
+      MovieController::show(id)
    end
 
    if input == 'view'
