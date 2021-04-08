@@ -38,6 +38,16 @@ class Movie
         MOVIES
     end
 
+    def save 
+        self.class.instances += 1
+        MOVIES << self
+
+        # writing to file
+        File.open('movies.yml', 'w') do |file|
+            file.write(MOVIES.to_yaml)
+        end
+    end
+
 
     def to_s
         "ID: #{id} \nTitle: #{@title} \nYear: #{@year}  \nPrice: #{@price}"
