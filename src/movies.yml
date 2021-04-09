@@ -1,27 +1,26 @@
 ---
 - !ruby/object:Movie
-  id: 1
-  title: harry Potter
-  year: '2001'
-  price: 40
-- !ruby/object:Movie
-  id: 2
-  title: Django Unchained
-  year: '2015'
-  price: 30
-- !ruby/object:Movie
-  id: 3
-  title: The Hobbit
-  year: '2000'
-  price: 20
-- !ruby/object:Movie
   id: 4
   title: harry Potter
   year: '2001'
   price: 40
-- &1 !ruby/object:Movie
-  id: 5
+- !ruby/object:Movie
+  id: 
   title: dasdasd
   year: 1990
   price: 0
-- *1
+- !ruby/object:Movie
+  id: 8
+  title: The Hobbit
+  year: '2000'
+  price: 20
+- !ruby/object:Movie
+  id: 9
+  title: harry Potter
+  year: '2001'
+  price: 40
+- !ruby/object:Movie
+  id: 
+  title: Hello world
+  year: 1999
+  price: 12
