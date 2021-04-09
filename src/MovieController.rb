@@ -1,7 +1,7 @@
 require_relative './Movie'
-require 'tty-table'
 require_relative './movie_list'
-
+require 'tty-table'
+require 'colorize'
 
 module MovieController
 
@@ -11,7 +11,7 @@ module MovieController
         def self.rows(movies) 
             ary = movies.map do |movie|
                 if not movie.nil?
-                    [ movie.id, movie.title, movie.year, movie.price ]
+                    [ movie.id, movie.title, movie.year, "$#{movie.price}".colorize(:green) ]
                 end
             end
             ary.compact
@@ -19,7 +19,7 @@ module MovieController
 
         def self.index(movies)
             return puts("All movies are sold out") unless movies.length > 0 
-            table = TTY::Table.new(["ID","Title", "Year", "Price"], rows(movies))
+            table = TTY::Table.new(["ID".colorize(:blue),"Title".colorize(:blue), "Year".colorize(:blue), "Price".colorize(:blue)], rows(movies))
             puts table.render(:unicode)
         end
 
@@ -30,11 +30,19 @@ module MovieController
     def self.sell 
         print "Movie Title: "
         title = gets.chomp
-        print "Release Date: "
-        date = gets.chomp 
+
+        while true
+            print "Release Date: "
+            date = gets.chomp.to_i 
+            if date > 2021 || date < 1950
+                puts "The date has to be between 1950 - 2021"
+            else 
+                break
+            end
+        end
         while true
             print "Selling Offer: "
-            offer = gets.chomp.to_f
+            offer = gets.chomp.to_i
             if offer > 15 
                 puts "That is too expensive, The most you can sell for is $15: "
             else 
@@ -68,14 +76,14 @@ module MovieController
 
         def self.rows(movie)
             rows = []
-            rows.push(['Id', movie.id])
-            rows.push(['Title', movie.title])
-            rows.push(['Year', movie.year])
-            rows.push(['Price', movie.price])
+            rows.push(['Id'.colorize(:green), movie.id])
+            rows.push(['Title'.colorize(:green), movie.title])
+            rows.push(['Year'.colorize(:green), movie.year])
+            rows.push(['Price'.colorize(:green), "$#{movie.price}"])
         end
 
         def self.show_movie(movie)
-            table = TTY::Table.new(["Property", "Contents"], rows(movie))
+            table = TTY::Table.new(["Property".colorize(:magenta), "Contents".colorize(:magenta)], rows(movie))
             puts table.render(:unicode)
         end
 

@@ -5,7 +5,7 @@ class Movie
     attr_reader :id 
 
     # MOVIES = []
-    MOVIES = YAML.load(File.read('movies.yml')) # rescue []
+    MOVIES = YAML.load(File.read('movies.yml')) rescue []
 
     @instances = 0
 
