@@ -1,10 +1,5 @@
 ---
 - !ruby/object:Movie
-  id: 1
-  title: Django Unchained
-  year: 2012
-  price: 25
-- !ruby/object:Movie
   id: 2
   title: Harry Potter and the Sorcerer's Stone
   year: 2001
@@ -55,11 +50,6 @@
   year: 1999
   price: 22
 - !ruby/object:Movie
-  id: 16
-  title: The Good, the Bad and the Ugly
-  year: 1966
-  price: 15
-- !ruby/object:Movie
   id: 17
   title: Forrest Gump
   year: 1994
@@ -74,3 +64,13 @@
   title: Yooo
   year: 2013
   price: 1
+- !ruby/object:Movie
+  id: 416
+  title: yooooooooo
+  year: 1956
+  price: 3
+- !ruby/object:Movie
+  id: 430
+  title: asdd
+  year: 2000
+  price: 12
