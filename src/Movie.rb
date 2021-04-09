@@ -10,12 +10,9 @@ class Movie
     @instances = 0
 
     def initialize(title, year, price)
-        @id = MOVIES.length + 1
-        # @id = rand(500)
         @title = title
         @year = year 
         @price = price
-        MOVIES << self
     end
 
     def self.instances
@@ -44,18 +41,17 @@ class Movie
     end
 
     def save 
+        @id = MOVIES.length + 1
         self.class.instances += 1
         MOVIES << self
-        # writing to file
         File.open('movies.yml', 'w') do |file|
             file.write(MOVIES.to_yaml)
         end
     end
 
-
-    def to_s
-        "ID: #{id} \nTitle: #{@title} \nYear: #{@year}  \nPrice: #{@price}"
-    end
-
+    # def to_s
+    #     "ID: #{id} \nTitle: #{@title} \nYear: #{@year}  \nPrice: #{@price}"
+    # end
+    
     puts
 end

@@ -60,17 +60,6 @@ module MovieController
         end
     end
 
-
-    # def self.buy(id)
-    #     ary = MovieList.movies.map do |movie|
-    #         if movie[:id] == id 
-    #             MovieList.movies.delete(movie)
-    #         end
-    #     end
-    #     ary
-    # end
-
-
     def self.show(id)
         movie = Movie.find(id)
 
