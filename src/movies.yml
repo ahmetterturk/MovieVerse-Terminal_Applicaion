@@ -1,11 +1,76 @@
 ---
 - !ruby/object:Movie
   id: 1
-  title: What In the Name
-  year: 2000
-  price: 12
+  title: Django Unchained
+  year: 2012
+  price: 25
 - !ruby/object:Movie
   id: 2
-  title: Django The Unchained
+  title: Harry Potter and the Sorcerer's Stone
+  year: 2001
+  price: 18
+- !ruby/object:Movie
+  id: 3
+  title: Harry Potter And The Chamber Of Secrets
+  year: 2002
+  price: 18
+- !ruby/object:Movie
+  id: 4
+  title: Snatch
   year: 2000
+  price: 15
+- !ruby/object:Movie
+  id: 5
+  title: The Wolf of Wall Street
+  year: 2000
+  price: 25
+- !ruby/object:Movie
+  id: 6
+  title: The Avengers
+  year: 2012
+  price: 22
+- !ruby/object:Movie
+  id: 8
+  title: Spider-Man
+  year: 2002
+  price: 15
+- !ruby/object:Movie
+  id: 11
+  title: The Lord of the Rings; Fellowship of the Ring
+  year: 2001
+  price: 20
+- !ruby/object:Movie
+  id: 12
+  title: The Godfather
+  year: 1972
+  price: 25
+- !ruby/object:Movie
+  id: 14
+  title: Pulp Fiction
+  year: 1994
+  price: 28
+- !ruby/object:Movie
+  id: 15
+  title: Fight Club
+  year: 1999
+  price: 22
+- !ruby/object:Movie
+  id: 16
+  title: The Good, the Bad and the Ugly
+  year: 1966
+  price: 15
+- !ruby/object:Movie
+  id: 17
+  title: Forrest Gump
+  year: 1994
+  price: 17
+- !ruby/object:Movie
+  id: 222
+  title: 'Hello World '
+  year: 2003
+  price: 4
+- !ruby/object:Movie
+  id: 260
+  title: Yooo
+  year: 2013
   price: 1
