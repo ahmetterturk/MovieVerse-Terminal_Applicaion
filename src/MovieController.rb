@@ -1,5 +1,6 @@
 require_relative './Movie'
 require 'tty-table'
+require_relative './movie_list'
 
 
 module MovieController
@@ -41,6 +42,7 @@ module MovieController
             end
         end
         movie = Movie.new(title, date, offer)
+        movie.save
     end
 
 
@@ -49,6 +51,16 @@ module MovieController
             movie.delete
         end
     end
+
+
+    # def self.buy(id)
+    #     ary = MovieList.movies.map do |movie|
+    #         if movie[:id] == id 
+    #             MovieList.movies.delete(movie)
+    #         end
+    #     end
+    #     ary
+    # end
 
 
     def self.show(id)

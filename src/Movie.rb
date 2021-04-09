@@ -1,8 +1,11 @@
+require 'yaml'
+
 class Movie 
     attr_accessor :title, :year, :price
     attr_reader :id 
 
-    MOVIES = []
+    # MOVIES = []
+    MOVIES = YAML.load(File.read('movies.yml'))
 
     @instances = 0
 
@@ -41,7 +44,6 @@ class Movie
     def save 
         self.class.instances += 1
         MOVIES << self
-
         # writing to file
         File.open('movies.yml', 'w') do |file|
             file.write(MOVIES.to_yaml)
