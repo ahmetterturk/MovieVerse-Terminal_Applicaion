@@ -4,7 +4,6 @@ class Movie
     attr_accessor :title, :year, :price
     attr_reader :id 
 
-    # MOVIES = []
     MOVIES = YAML.load(File.read('movies.yml')) rescue []
 
     @instances = 0
@@ -40,8 +39,8 @@ class Movie
         MOVIES
     end
 
-    def save 
-        @id = MOVIES.length + 1
+    def save
+        @id = rand(100..500)
         self.class.instances += 1
         MOVIES << self
         File.open('movies.yml', 'w') do |file|
@@ -49,9 +48,4 @@ class Movie
         end
     end
 
-    # def to_s
-    #     "ID: #{id} \nTitle: #{@title} \nYear: #{@year}  \nPrice: #{@price}"
-    # end
-    
-    puts
 end
