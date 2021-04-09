@@ -3,14 +3,6 @@ require_relative './MovieController'
 require_relative './movie_list'
 require 'pastel'
 
-django = Movie.new('Django Unchained', '2015', 30)
-hobbit = Movie.new('The Hobbit', '2000', 20)
-harry_potter = Movie.new('harry Potter', '2001', 40)
-
-# MovieList.movies.each do |movie|
-#    Movie.new(movie[:title], movie[:year], movie[:price])
-# end
-
 pastel = Pastel.new
 banner = """
 
