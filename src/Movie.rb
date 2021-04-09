@@ -5,7 +5,7 @@ class Movie
     attr_reader :id 
 
     # MOVIES = []
-    MOVIES = YAML.load(File.read('movies.yml'))
+    MOVIES = YAML.load(File.read('movies.yml')) # rescue []
 
     @instances = 0
 
@@ -35,6 +35,8 @@ class Movie
         return if @id.nil?
         idd = MOVIES.index { |movie| movie && movie.id == @id }
         @id = MOVIES[idd] = nil 
+        MOVIES.reject! { |item| item.nil? || item == '' }
+        File.open('movies.yml', 'w') { |file| file.write(MOVIES.to_yaml) }
     end
 
     def self.display_movies
