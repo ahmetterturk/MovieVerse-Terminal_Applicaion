@@ -74,3 +74,13 @@
   title: asdd
   year: 2000
   price: 12
+- !ruby/object:Movie
+  id: 246
+  title: Shrek
+  year: 2000
+  price: 20
+- !ruby/object:Movie
+  id: 468
+  title: Shrek
+  year: 2000
+  price: 20
