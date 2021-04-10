@@ -22,7 +22,7 @@ banner = """
 
 """
 
-puts pastel.blue(banner)
+puts pastel.yellow(banner)
 puts 
 puts "Welcome to MovieVerse"
 

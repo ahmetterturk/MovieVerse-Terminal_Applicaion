@@ -1,5 +1,10 @@
 ---
 - !ruby/object:Movie
+  id: 1
+  title: Django Unchained
+  year: 2012
+  price: 25
+- !ruby/object:Movie
   id: 2
   title: Harry Potter and the Sorcerer's Stone
   year: 2001
@@ -25,10 +30,25 @@
   year: 2012
   price: 22
 - !ruby/object:Movie
+  id: 7
+  title: Thor
+  year: 2011
+  price: 21
+- !ruby/object:Movie
   id: 8
   title: Spider-Man
   year: 2002
   price: 15
+- !ruby/object:Movie
+  id: 9
+  title: The Shawshank Redemption
+  year: 1994
+  price: 13
+- !ruby/object:Movie
+  id: 10
+  title: The Dark Night
+  year: 2008
+  price: 24
 - !ruby/object:Movie
   id: 11
   title: The Lord of the Rings; Fellowship of the Ring
@@ -38,6 +58,11 @@
   id: 12
   title: The Godfather
   year: 1972
+  price: 25
+- !ruby/object:Movie
+  id: 13
+  title: The Godfather; Part 2
+  year: 1974
   price: 25
 - !ruby/object:Movie
   id: 14
@@ -55,32 +80,22 @@
   year: 1994
   price: 17
 - !ruby/object:Movie
-  id: 222
-  title: 'Hello World '
-  year: 2003
-  price: 4
+  id: 18
+  title: Inception
+  year: 2010
+  price: 21
 - !ruby/object:Movie
-  id: 260
-  title: Yooo
-  year: 2013
-  price: 1
+  id: 19
+  title: Interstellar
+  year: 2014
+  price: 16
 - !ruby/object:Movie
-  id: 416
-  title: yooooooooo
-  year: 1956
-  price: 3
-- !ruby/object:Movie
-  id: 430
-  title: asdd
-  year: 2000
-  price: 12
-- !ruby/object:Movie
-  id: 246
-  title: Shrek
+  id: 20
+  title: Gladiator
   year: 2000
   price: 20
 - !ruby/object:Movie
-  id: 468
-  title: Shrek
-  year: 2000
-  price: 20
+  id: 204
+  title: Batman Begins
+  year: 2005
+  price: 13
