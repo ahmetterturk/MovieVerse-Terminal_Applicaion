@@ -94,8 +94,3 @@
   title: Gladiator
   year: 2000
   price: 20
-- !ruby/object:Movie
-  id: 204
-  title: Batman Begins
-  year: 2005
-  price: 13
