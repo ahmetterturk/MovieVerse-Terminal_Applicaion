@@ -1,15 +1,5 @@
 ---
 - !ruby/object:Movie
-  id: 1
-  title: Django Unchained
-  year: 2012
-  price: 25
-- !ruby/object:Movie
-  id: 2
-  title: Harry Potter and the Sorcerer's Stone
-  year: 2001
-  price: 18
-- !ruby/object:Movie
   id: 3
   title: Harry Potter And The Chamber Of Secrets
   year: 2002
@@ -80,17 +70,7 @@
   year: 1994
   price: 17
 - !ruby/object:Movie
-  id: 18
-  title: Inception
-  year: 2010
-  price: 21
-- !ruby/object:Movie
   id: 19
   title: Interstellar
   year: 2014
   price: 16
-- !ruby/object:Movie
-  id: 20
-  title: Gladiator
-  year: 2000
-  price: 20

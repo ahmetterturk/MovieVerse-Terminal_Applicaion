@@ -56,7 +56,7 @@ module MovieController
 
     def self.buy(id)
         if movie = Movie.find(id)
-            movie.delete
+            movie.delete unless movie.nil?
         end
     end
 
@@ -76,7 +76,7 @@ module MovieController
             puts table.render(:unicode)
         end
 
-        show_movie(movie)
+        show_movie(movie) unless movie.nil?
     end
     
 
