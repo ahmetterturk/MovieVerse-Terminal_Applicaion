@@ -1,6 +1,7 @@
 require_relative './Movie.rb'
 require_relative './MovieController'
 require_relative './movie_list'
+require 'tty-prompt'
 require 'pastel'
 
 pastel = Pastel.new
@@ -32,6 +33,7 @@ begin
    puts
    puts "Buy\nSell\nView\nShow\nExit"
    input, id = gets.chomp.downcase.split(' ')
+   
 
    if input == 'buy'
       MovieController::buy(id)
