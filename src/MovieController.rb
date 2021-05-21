@@ -54,13 +54,17 @@ module MovieController
     end
 
 
-    def self.buy(id)
+    def self.buy
+        puts "Input the ID of movie you want to buy"
+        id = gets.chomp.to_i 
         if movie = Movie.find(id)
             movie.delete unless movie.nil?
         end
     end
 
-    def self.show(id)
+    def self.show
+        puts "Input the ID of movie you want to show"
+        id = gets.chomp.to_i 
         movie = Movie.find(id)
 
         def self.rows(movie)

@@ -4,6 +4,7 @@ require_relative './movie_list'
 require 'tty-prompt'
 require 'pastel'
 
+prompt = TTY::Prompt.new
 pastel = Pastel.new
 banner = """
 
@@ -28,28 +29,23 @@ puts
 puts "Welcome to MovieVerse"
 
 begin
-   puts "What would you like to do?"
-   puts "For Buy and Show options, add the id of the movie, e.g(buy 2, show 7)"
-   puts
-   puts "Buy\nSell\nView\nShow\nExit"
-   input, id = gets.chomp.downcase.split(' ')
-   
+   input = prompt.select("What would you like to do?", %w(Buy Sell View Show Exit), symbols: { marker: "\u{1F4FD} " })
 
-   if input == 'buy'
-      MovieController::buy(id)
+   if input == 'Buy'
+      MovieController::buy
    end
 
-   if input == 'sell'
+   if input == 'Sell'
       MovieController::sell
    end
 
-   if input == 'show'
-      MovieController::show(id)
+   if input == 'Show'
+      MovieController::show
    end
 
-   if input == 'view'
+   if input == 'View'
       MovieController::list
    end
 
    puts
-end until input == 'exit'
+end until input == 'Exit'
