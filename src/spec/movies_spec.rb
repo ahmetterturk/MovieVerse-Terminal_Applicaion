@@ -1,11 +1,15 @@
 require_relative '../Movie'
 require_relative '../MovieController'
 
-RSpec.describe Movie.new("Shrek", 3, 15) do
-    it { is_expected.to have_attributes(:title => "Shrek") }
-    it { is_expected.to have_attributes(:title => a_string_starting_with("S") ) }
-    it { is_expected.to have_attributes(:year => 3) }
-    it { is_expected.to have_attributes(:price => (a_value > 1) ) }
+
+describe Movie do 
+    it 'should create a movie with title' do 
+        title = 'Lord of rings'
+        year = 2012
+        price = 24
+        movie = Movie.new(title, year,price)
+        expect(movie.title).to eq(title) 
+    end
 end
 
 RSpec.describe Movie do
